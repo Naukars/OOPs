@@ -1,0 +1,106 @@
+Q.9 This Keyword, Super Keyword, Final Keyword
+
+This Keyword: Refers to the current object (current instance).
+
+Syntax:
+
+Access field: this.fieldName;
+Call method: this.methodName(args);
+
+Super Keyword: Refers to the immediate parent class.
+
+Syntax:
+
+Access parent field/method: super.memberName;
+Call parent constructor (must be first line in constructor): super(args);
+
+Final Keyword: Prevents change: final variable cannot be reassigned; final method cannot be overridden; 
+                final class cannot be extended.
+
+Syntax:
+
+Final variable: final Type VAR = value;
+Final method: final returnType methodName(...) { ... }
+Final class: final class ClassName { ... }
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q.10 What is Constructor? What are its types
+
+A constructor is a special member of a class that has the same name as the class and no return type
+
+Types:
+
+1) Default Constructor: sets fields to default values (0, false, null). 
+Provided by the compiler only if you define no constructors.
+
+2) Parameterized Constructor: Accepts parameters to initialize fields with provided values.
+
+3) Copy Constructor: A copy constructor is a constructor that takes another instance of the same class and initializes the new object by copying fields from that instance.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q.11 what is overriding and overloading?
+
+1) Overloading: Same method name in the same class, different parameter lists (number, types, or order). 
+Resolved at compile time (compile-time polymorphism).
+
+Syntax:
+returnType methodName(TypeA a) { ... }
+returnType methodName(TypeA a, TypeB b) { ... }
+returnType methodName(TypeB b) { ... }
+
+Example: 
+class Printer {
+  void print(int x) {
+    System.out.println("int: " + x);
+  }
+  void print(double x) {
+    System.out.println("double: " + x);
+  }
+  void print(String s) {
+    System.out.println("String: " + s);
+  }
+  public static void main(String[] args) {
+    Printer p = new Printer();
+    p.print(5);
+    p.print(3.14);
+    p.print("Hello");
+  }
+}
+
+
+Overriding : A subclass provides a method with the same signature (name, parameter types, and order) as in its superclass to change behavior. 
+Resolved at runtime (runtime polymorphism).
+
+Syntax: 
+class Parent {
+  returnType m(TypeA a) { ... }
+}
+class Child extends Parent {
+  @Override
+  returnType m(TypeA a) { ... }
+}
+
+Example:
+class Animal {
+  String sound() {
+    return "Some sound";
+  }
+}
+class Dog extends Animal {
+  @Override
+  String sound() {
+    return "Bark";
+  }
+}
+class Main {
+  public static void main(String[] args) {
+    Animal a = new Animal();
+    Animal d = new Dog();
+    System.out.println(a.sound());
+    System.out.println(d.sound());
+  }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------

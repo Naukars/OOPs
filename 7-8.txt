@@ -1,0 +1,61 @@
+Q.7 What is Method? Syntax of Method.
+
+A method is a named block of code that performs a task and can take inputs (parameters) and return a value. 
+Methods help avoid repetition and keep logic organized.
+
+Method Syntax:
+returnType methodName(parameterType1 p1, parameterType2 p2, ...) {
+  statements;
+  return if any;
+}
+
+Method Example:
+class Calculator {
+  int add(int a, int b) {
+    return a + b;
+  }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q.8 Types of Methods
+
+Types of methods:
+1) Instance Method
+2) Static Method
+3) Constructor Method (special)
+
+A) Instance Method:
+An instance method is a non-static method that belongs to an object; 
+it can access instance fields
+
+Instance Method Syntax
+accessModifier returnType methodName(parameterType1 p1, parameterType2 p2, ...) {
+  statements;
+  return value; 
+}
+
+B) Static Method
+A static method belongs to the class, not to any object, 
+and can be called using the class name.
+
+Static Method Syntax:
+accessModifier static returnType methodName(parameterType1 p1, parameterType2 p2, ...) {
+  statements;
+  return value; 
+}
+
+C) Constructor Method
+A constructor is a special, non‑returning member whose name matches the class and runs when an object is created. 
+It initializes the object’s state.
+
+Constructor Method Syntax:
+A constructor is a special, non‑returning member whose name matches the class and runs when an object is created. 
+It initializes the object’s state.
+
+Constructor Method Syntax:
+accessModifier ClassName(parameterType1 p1, parameterType2 p2, ...) {
+  initializationStatements;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------

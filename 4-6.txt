@@ -1,0 +1,17 @@
+Q.4 What is DataType?
+
+A data type tells Java what kind of value is stored and what operations are valid, ensuring type safety at compile time. 
+Common categories are primitive types and reference types.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.5 Different Types of Data Types.
+
+Primitive types are the basic building blocks like int, double, boolean, and char; they store actual values and live on the stack. 
+Reference types store references to objects (arrays, classes, interfaces) on the heap.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.6 What is a Variable?
+
+A variable is a named storage location with a type; it can hold a value that may change during execution. 
+Its scope and lifetime depend on where it’s declared (local, instance, or static)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------

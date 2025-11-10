@@ -1,0 +1,108 @@
+Q.12 What is array? How to declare an array with syntax and example.
+
+An array in Java is a fixed-size, indexed sequence of elements of the same type stored contiguously in memory. 
+It provides constant-time access by index and a length property to know its size.
+
+Syntax:
+
+type[] name;
+type name[];
+
+Example:
+
+One-dimensional
+int[] nums = new int;
+nums = 10;
+nums = 20;​
+
+String[] cars = {"Volvo", "BMW", "Ford"};
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q.13 What are Static Data Members and Static Methods?
+
+Static data members and static methods belong to the class itself, not to individual objects. There is exactly one copy of each static field per class, 
+and static methods can be invoked using the class name.
+
+Static data member (field):
+Declared with the static keyword inside a class.
+Shared across all instances; updating it through any reference affects the single class-level value.
+Typical uses: counters, configuration constants, caches.
+
+Static method:
+Declared with static and called as ClassName.method().
+Can access only static members directly; it cannot use this or super.
+Typical uses: utility/helpers, factory methods, operations that don’t depend on object state.
+
+Static Method Example
+class MyClass {
+  static int count;
+  static final double PI = 3.1415;
+  static void increment() {
+    count++;
+}
+
+int instanceValue;
+
+static int sum(int a, int b) {
+    return a + b;
+}
+
+Static Members Example:
+class Demo {
+  public static void main(String[] args) {
+    System.out.println(MyClass.PI);
+    MyClass.increment();
+    MyClass.increment();
+    System.out.println(MyClass.count);
+
+------------------------------------------------------------------------------------------------------
+
+Q.14 What is Constructor Overloading?
+
+Having multiple constructors in the same class with the same name (the class name) 
+but different parameter lists (number, types, or order)
+
+Syntax :
+
+class ClassName {
+  ClassName() { ... }
+  ClassName(Type1 p1) { ... }
+  ClassName(Type1 p1, Type2 p2) { ... }
+}
+
+
+Example :
+
+class Account {
+  String owner;
+  double balance;
+  String type;
+  
+  Account() {
+    this("Unknown", 0.0, "SAVINGS");
+}
+
+Account(String owner) {
+    this(owner, 0.0, "SAVINGS");
+}
+
+Account(String owner, double balance) {
+    this(owner, balance, "SAVINGS");
+}
+
+Account(String owner, double balance, String type) {
+    this.owner = owner;
+    this.balance = balance;
+    this.type = type;
+}
+
+public static void main(String[] args) {
+    Account a1 = new Account();
+    Account a2 = new Account("Asha");
+    Account a3 = new Account("Ravi", 5000.0);
+    Account a4 = new Account("Neha", 12000.0, "CURRENT");
+    System.out.println(a4.owner + " " + a4.balance + " " + a4.type);
+}
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,50 @@
+Q.1
+OOP (Object-Oriented Programming) is a way of organizing software around objects—bundles of data plus behavior—so code is modular, reusable, and easier to reason about. 
+In Java, almost everything lives inside classes, and objects are created from those classes.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.2
+A class is a blueprint that defines what data an object holds (fields) and what it can do (methods). 
+Think of it like a form that all its objects must follow.
+
+Class Syntax:
+class ClassName {
+// members and methods
+}
+
+Class Example:
+class student{
+  string name;
+  int year;
+}
+void introduce() {
+  System.out.println("I am " + name + ", year " + year);
+}
+
+public static void main(String[] args) {
+  Student s1 = new Student("Asha", 2);
+  s1.introduce();
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+Q.3
+An object is a real instance created from a class at runtime, with its own copy of data. 
+You create objects to actually perform work and store state during program execution.
+
+Object Syntax:
+ClassName ObjectName = new ClassName();
+
+Object Example:
+class Student {
+  string name;
+  int year;
+}
+void introduce() {
+  System.out.println("I am " + name + ", year " + year);
+}
+public static void main(String[] args) {
+    Student s1 = new Student("Asha", 2);
+    s1.introduce();
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
